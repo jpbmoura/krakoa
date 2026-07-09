@@ -1,0 +1,280 @@
+import type { Guide } from "@/lib/guides";
+
+export const krakoa: Guide = {
+  slug: "era-krakoa",
+  title: "Era Krakoa",
+  era: "2019 — 2024",
+  description:
+    "A saga completa de Jonathan Hickman e do coletivo X: de House of X / Powers of X até a queda da nação mutante em Fall of the House of X.",
+  phases: [
+    {
+      id: "fundacao",
+      code: "PASSO_00",
+      title: "A Fundação",
+      subtitle:
+        "House of X / Powers of X — uma história só, em ordem alternada de publicação. Termine antes de qualquer outra coisa.",
+      sections: [
+        {
+          id: "hoxpox",
+          title: "House of X / Powers of X (2019)",
+          description:
+            "A ordem oficial não é 100% intercalada — há semanas com duas edições seguidas. Evite a Chronological Edition na primeira leitura.",
+          items: [
+            { id: "hox-1", label: "House of X #1", tier: "essential", cover: { q: "House of X", issue: 1 } },
+            { id: "pox-1", label: "Powers of X #1", tier: "essential", cover: { q: "Powers of X", issue: 1 } },
+            { id: "hox-2", label: "House of X #2", tier: "essential", cover: { q: "House of X", issue: 2 } },
+            { id: "pox-2", label: "Powers of X #2", tier: "essential", cover: { q: "Powers of X", issue: 2 } },
+            { id: "pox-3", label: "Powers of X #3", tier: "essential", cover: { q: "Powers of X", issue: 3 } },
+            { id: "hox-3", label: "House of X #3", tier: "essential", cover: { q: "House of X", issue: 3 } },
+            { id: "hox-4", label: "House of X #4", tier: "essential", cover: { q: "House of X", issue: 4 } },
+            { id: "pox-4", label: "Powers of X #4", tier: "essential", cover: { q: "Powers of X", issue: 4 } },
+            { id: "hox-5", label: "House of X #5", tier: "essential", cover: { q: "House of X", issue: 5 } },
+            { id: "pox-5", label: "Powers of X #5", tier: "essential", cover: { q: "Powers of X", issue: 5 } },
+            { id: "hox-6", label: "House of X #6", tier: "essential", cover: { q: "House of X", issue: 6 } },
+            { id: "pox-6", label: "Powers of X #6", tier: "essential", cover: { q: "Powers of X", issue: 6 } },
+          ],
+        },
+      ],
+    },
+    {
+      id: "dawn",
+      code: "FASE_01",
+      title: "Dawn of X",
+      subtitle:
+        "2019–2020. A linha explode em séries paralelas, cada uma cobrindo um canto de Krakoa. Leia os 2 primeiros números de cada série e siga só o que te fisgar.",
+      sections: [
+        {
+          id: "dawn-espinha",
+          title: "A espinha",
+          items: [
+            {
+              id: "xmen19",
+              label: "X-Men (2019), de Hickman — #1–11",
+              tier: "essential",
+              note: "A revista-mãe. Os #12–15 são capítulos de X of Swords.",
+              cover: { q: "X-Men (2019)", issue: 1 },
+            },
+          ],
+        },
+        {
+          id: "dawn-recomendado",
+          title: "Vale muito a pena",
+          items: [
+            { id: "marauders19", label: "Marauders (2019), de Gerry Duggan", tier: "recommended", note: "Piratas mutantes, Kitty Pryde, Emma Frost.", cover: { q: "Marauders (2019)", issue: 1 } },
+            { id: "xforce19", label: "X-Force (2019), de Benjamin Percy", tier: "recommended", note: "CIA mutante; o lado sombrio do Fera.", cover: { q: "X-Force (2019)", issue: 1 } },
+            { id: "excalibur19", label: "Excalibur (2019), de Tini Howard", tier: "recommended", note: "Magia mutante e o Outromundo — importante pra X of Swords.", cover: { q: "Excalibur (2019)", issue: 1 } },
+            { id: "hellions20", label: "Hellions (2020), de Zeb Wells", tier: "recommended", note: "Comédia sombria com os 'inadequados' de Krakoa.", cover: { q: "Hellions (2020)", issue: 1 } },
+            { id: "xfactor20", label: "X-Factor (2020), de Leah Williams", tier: "recommended", note: "Detetives da ressurreição.", cover: { q: "X-Factor (2020)", issue: 1 } },
+          ],
+        },
+        {
+          id: "dawn-completista",
+          title: "Completista",
+          items: [
+            { id: "newmutants19", label: "New Mutants (2019), Hickman/Brisson", tier: "completionist", cover: { q: "New Mutants (2019)", issue: 1 } },
+            { id: "fallenangels19", label: "Fallen Angels (2019) #1–6", tier: "completionist", cover: { q: "Fallen Angels (2019)", issue: 1 } },
+            { id: "cable20", label: "Cable (2020), de Duggan", tier: "completionist", cover: { q: "Cable (2020)", issue: 1 } },
+            { id: "wolverine20", label: "Wolverine (2020), de Percy", tier: "completionist", cover: { q: "Wolverine (2020)", issue: 1 } },
+            { id: "gsxm", label: "Giant-Size X-Men (one-shots de Hickman)", tier: "completionist", note: "Jean/Emma, Noturno, Magneto, Fantomex, Tempestade.", cover: { q: "Giant-Size X-Men: Jean Grey and Emma Frost", issue: 1 } },
+          ],
+        },
+        {
+          id: "xos",
+          title: "Evento: X of Swords (22 partes)",
+          description:
+            "Torneio de campeões: Krakoa vs. Arakko. Uma história só fluindo entre as séries — siga a ordem exata.",
+          items: [
+            { id: "xos-p1", label: "Prelúdio — X-Men #12", tier: "essential", cover: { q: "X-Men (2019)", issue: 12 } },
+            { id: "xos-p2", label: "Prelúdio — Excalibur #12", tier: "essential", cover: { q: "Excalibur (2019)", issue: 12 } },
+            { id: "xos-01", label: "01 — X of Swords: Creation #1", tier: "essential", cover: { q: "X of Swords: Creation", issue: 1 } },
+            { id: "xos-02", label: "02 — X-Factor #4", tier: "essential", cover: { q: "X-Factor (2020)", issue: 4 } },
+            { id: "xos-03", label: "03 — Wolverine #6", tier: "essential", cover: { q: "Wolverine (2020)", issue: 6 } },
+            { id: "xos-04", label: "04 — X-Force #13", tier: "essential", cover: { q: "X-Force (2019)", issue: 13 } },
+            { id: "xos-05", label: "05 — Marauders #13", tier: "essential", cover: { q: "Marauders (2019)", issue: 13 } },
+            { id: "xos-06", label: "06 — Hellions #5", tier: "essential", cover: { q: "Hellions (2020)", issue: 5 } },
+            { id: "xos-07", label: "07 — New Mutants #13", tier: "essential", cover: { q: "New Mutants (2019)", issue: 13 } },
+            { id: "xos-08", label: "08 — Cable #5", tier: "essential", cover: { q: "Cable (2020)", issue: 5 } },
+            { id: "xos-09", label: "09 — Excalibur #13", tier: "essential", cover: { q: "Excalibur (2019)", issue: 13 } },
+            { id: "xos-10", label: "10 — X-Men #13", tier: "essential", cover: { q: "X-Men (2019)", issue: 13 } },
+            { id: "xos-11", label: "11 — X of Swords: Stasis #1", tier: "essential", cover: { q: "X of Swords: Stasis", issue: 1 } },
+            { id: "xos-12", label: "12 — X-Men #14", tier: "essential", cover: { q: "X-Men (2019)", issue: 14 } },
+            { id: "xos-13", label: "13 — Marauders #14", tier: "essential", cover: { q: "Marauders (2019)", issue: 14 } },
+            { id: "xos-14", label: "14 — Marauders #15", tier: "essential", cover: { q: "Marauders (2019)", issue: 15 } },
+            { id: "xos-15", label: "15 — Excalibur #14", tier: "essential", cover: { q: "Excalibur (2019)", issue: 14 } },
+            { id: "xos-16", label: "16 — Wolverine #7", tier: "essential", cover: { q: "Wolverine (2020)", issue: 7 } },
+            { id: "xos-17", label: "17 — X-Force #14", tier: "essential", cover: { q: "X-Force (2019)", issue: 14 } },
+            { id: "xos-18", label: "18 — Hellions #6", tier: "essential", cover: { q: "Hellions (2020)", issue: 6 } },
+            { id: "xos-19", label: "19 — Cable #6", tier: "essential", cover: { q: "Cable (2020)", issue: 6 } },
+            { id: "xos-20", label: "20 — X-Men #15", tier: "essential", cover: { q: "X-Men (2019)", issue: 15 } },
+            { id: "xos-21", label: "21 — Excalibur #15", tier: "essential", cover: { q: "Excalibur (2019)", issue: 15 } },
+            { id: "xos-22", label: "22 — X of Swords: Destruction #1", tier: "essential", cover: { q: "X of Swords: Destruction", issue: 1 } },
+          ],
+        },
+      ],
+    },
+    {
+      id: "reign",
+      code: "FASE_02",
+      title: "Reign of X",
+      subtitle:
+        "2021. As séries continuam, chegam novas, e Hickman encerra seu arco com Inferno. Culmina no primeiro Hellfire Gala.",
+      sections: [
+        {
+          id: "reign-espinha",
+          title: "A espinha",
+          items: [
+            { id: "xmen19b", label: "X-Men (2019) #16–21 — reta final do Hickman", tier: "essential", cover: { q: "X-Men (2019)", issue: 16 } },
+            { id: "inferno21", label: "Inferno (2021), de Hickman — #1–4", tier: "essential", note: "O grande adeus: Mística, Destino e Moira. Não pule.", cover: { q: "Inferno (2021)", issue: 1 } },
+          ],
+        },
+        {
+          id: "reign-recomendado",
+          title: "Vale muito a pena",
+          items: [
+            { id: "sword20", label: "S.W.O.R.D. (2020), de Al Ewing — #1–11", tier: "recommended", note: "A parte cósmica; prepara o terreno pra X-Men Red.", cover: { q: "S.W.O.R.D. (2020)", issue: 1 } },
+            { id: "wayofx", label: "Way of X (2021), de Si Spurrier", tier: "recommended", note: "Noturno e a espiritualidade mutante.", cover: { q: "Way of X", issue: 1 } },
+          ],
+        },
+        {
+          id: "reign-eventos",
+          title: "Eventos e transição",
+          items: [
+            { id: "gala21", label: "Hellfire Gala 2021 + Planet-Size X-Men", tier: "recommended", note: "Eleição do time e a terraformação de Marte (Arakko).", cover: { q: "Planet-Size X-Men", issue: 1 } },
+            { id: "trialmagneto", label: "X-Men: The Trial of Magneto (2021) #1–5", tier: "completionist", cover: { q: "X-Men: The Trial of Magneto", issue: 1 } },
+            { id: "xlives", label: "X Lives of Wolverine #1–5", tier: "essential", note: "Ponte pro Destiny of X — leia alternado com X Deaths.", cover: { q: "X Lives of Wolverine", issue: 1 } },
+            { id: "xdeaths", label: "X Deaths of Wolverine #1–5", tier: "essential", note: "Alternar: Lives #1, Deaths #1, Lives #2…", cover: { q: "X Deaths of Wolverine", issue: 1 } },
+          ],
+        },
+        {
+          id: "reign-completista",
+          title: "Completista",
+          items: [
+            { id: "cota", label: "Children of the Atom (2021)", tier: "completionist", cover: { q: "Children of the Atom (2021)", issue: 1 } },
+            { id: "xcorp", label: "X-Corp (2021)", tier: "completionist", cover: { q: "X-Corp", issue: 1 } },
+            { id: "reign-cont", label: "Continuações: Marauders / Excalibur / New Mutants / Cable / Hellions / X-Factor", tier: "completionist" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "destiny",
+      code: "FASE_03",
+      title: "Destiny of X",
+      subtitle:
+        "2022–2023. Hickman sai; o coletivo assume. Aqui estão alguns dos melhores títulos da era inteira.",
+      sections: [
+        {
+          id: "destiny-espinha",
+          title: "A espinha",
+          items: [
+            { id: "immortal", label: "Immortal X-Men (2022), de Kieron Gillen — #1–18", tier: "essential", note: "A nova revista-central: o Conselho Silencioso. Amarra tudo até o final.", cover: { q: "Immortal X-Men", issue: 1 } },
+            { id: "xmenred", label: "X-Men Red (2022), de Al Ewing — #1–18", tier: "essential", note: "Arakko, Tempestade e Magneto. Pra muita gente, o melhor título da era.", cover: { q: "X-Men Red (2022)", issue: 1 } },
+            { id: "xmen21", label: "X-Men (2021), de Gerry Duggan", tier: "essential", note: "O time 'clássico' de ação; vai até o fim da era.", cover: { q: "X-Men (2021)", issue: 1 } },
+          ],
+        },
+        {
+          id: "destiny-recomendado",
+          title: "Vale muito a pena",
+          items: [
+            { id: "sabretooth", label: "Sabretooth (2022), de Victor LaValle — #1–5", tier: "recommended", note: "Pode ser lida a qualquer momento após X-Force #1.", cover: { q: "Sabretooth (2022)", issue: 1 } },
+            { id: "legionofx", label: "Legion of X (2022), de Si Spurrier", tier: "recommended", note: "Continuação espiritual de Way of X.", cover: { q: "Legion of X", issue: 1 } },
+            { id: "marauders22", label: "Marauders (2022), de Steve Orlando", tier: "recommended", cover: { q: "Marauders (2022)", issue: 1 } },
+          ],
+        },
+        {
+          id: "destiny-eventos",
+          title: "Eventos",
+          items: [
+            { id: "gala22", label: "Hellfire Gala 2022", tier: "recommended", cover: { q: "X-Men: Hellfire Gala (2022)", issue: 1 } },
+            { id: "axe", label: "A.X.E.: Judgment Day (2022), de Gillen — #1–6", tier: "essential", note: "Eternos x Vingadores x X-Men. Tie-ins opcionais no Companion.", cover: { q: "A.X.E.: Judgment Day", issue: 1 } },
+            { id: "sos-1", label: "Sins of Sinister #1", tier: "essential", cover: { q: "Sins of Sinister", issue: 1 } },
+            { id: "sos-immoral", label: "Immoral X-Men #1–3", tier: "essential", note: "Corre em paralelo com Storm & the Brotherhood e Nightcrawlers.", cover: { q: "Immoral X-Men", issue: 1 } },
+            { id: "sos-storm", label: "Storm & the Brotherhood of Mutants #1–3", tier: "essential", cover: { q: "Storm & The Brotherhood of Mutants", issue: 1 } },
+            { id: "sos-night", label: "Nightcrawlers #1–3", tier: "essential", cover: { q: "Nightcrawlers", issue: 1 } },
+            { id: "sos-dominion", label: "Sins of Sinister: Dominion #1", tier: "essential", cover: { q: "Sins of Sinister: Dominion", issue: 1 } },
+          ],
+        },
+        {
+          id: "destiny-completista",
+          title: "Completista",
+          items: [
+            { id: "knightsofx", label: "Knights of X (Howard)", tier: "completionist", cover: { q: "Knights of X", issue: 1 } },
+            { id: "newmutants-ayala", label: "New Mutants (Ayala)", tier: "completionist" },
+            { id: "xterminators", label: "X-Terminators (Williams)", tier: "completionist", cover: { q: "X-Terminators (2022)", issue: 1 } },
+            { id: "percy-cont", label: "X-Force / Wolverine (Percy, continuações)", tier: "completionist" },
+            { id: "darkweb", label: "Dark Web (crossover com Spider-Man)", tier: "completionist", cover: { q: "Dark Web (2022)", issue: 1 } },
+          ],
+        },
+      ],
+    },
+    {
+      id: "fall",
+      code: "FASE_04",
+      title: "Fall of X",
+      subtitle:
+        "2023. O Gala vira tudo do avesso: Krakoa cai e os mutantes voltam a ser caçados.",
+      sections: [
+        {
+          id: "fall-espinha",
+          title: "A espinha",
+          items: [
+            { id: "gala23", label: "Hellfire Gala 2023 — o ponto de virada", tier: "essential", cover: { q: "X-Men: Hellfire Gala 2023", issue: 1 } },
+            { id: "fall-flagships", label: "Continuar: X-Men Red, Immortal X-Men e X-Men (Duggan) rumo ao final", tier: "essential" },
+          ],
+        },
+        {
+          id: "fall-recomendado",
+          title: "Vale muito a pena",
+          items: [
+            { id: "resmagneto", label: "Resurrection of Magneto (2024), de Al Ewing — #1–4", tier: "recommended", note: "Conecta direto ao final (a ordem exata está na fase 05).", cover: { q: "Resurrection of Magneto", issue: 1 } },
+          ],
+        },
+        {
+          id: "fall-completista",
+          title: "Completista",
+          items: [
+            { id: "fall-minis", label: "Minis do período: Uncanny Spider-Man, Dark X-Men, Children of the Vault, Alpha Flight, Jean Grey, Realm of X…", tier: "completionist" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "final",
+      code: "FASE_05",
+      title: "O Grande Final",
+      subtitle:
+        "2024. Fall of the House of X (a guerra no presente, Duggan) + Rise of the Powers of X (a guerra cósmica, Gillen), entrelaçadas — espelhando o começo. Tie-ins de Iron Man, Vingadores, Ms. Marvel e Capitã Marvel ficaram de fora por serem opcionais.",
+      sections: [
+        {
+          id: "final-ordem",
+          title: "Caminho essencial, em ordem",
+          items: [
+            { id: "gsx24", label: "Giant-Size X-Men (2024) #1", tier: "essential", cover: { q: "Giant-Size X-Men (2024)", issue: 1 } },
+            { id: "forever-1", label: "X-Men: Forever (2024) #1", tier: "essential", cover: { q: "X-Men: Forever (2024)", issue: 1 } },
+            { id: "x21-30", label: "X-Men (2021) #30", tier: "essential", cover: { q: "X-Men (2021)", issue: 30 } },
+            { id: "x21-31", label: "X-Men (2021) #31", tier: "essential", cover: { q: "X-Men (2021)", issue: 31 } },
+            { id: "fohox-1", label: "Fall of the House of X #1", tier: "essential", cover: { q: "Fall of the House of X", issue: 1 } },
+            { id: "ropox-1", label: "Rise of the Powers of X #1", tier: "essential", cover: { q: "Rise of the Powers of X", issue: 1 } },
+            { id: "deadxmen-1", label: "Dead X-Men #1", tier: "essential", cover: { q: "Dead X-Men", issue: 1 } },
+            { id: "resmag-13", label: "Resurrection of Magneto #1–3", tier: "essential", cover: { q: "Resurrection of Magneto", issue: 1 } },
+            { id: "fohox-2", label: "Fall of the House of X #2", tier: "essential", cover: { q: "Fall of the House of X", issue: 2 } },
+            { id: "ropox-2", label: "Rise of the Powers of X #2", tier: "essential", cover: { q: "Rise of the Powers of X", issue: 2 } },
+            { id: "x21-32", label: "X-Men (2021) #32", tier: "essential", cover: { q: "X-Men (2021)", issue: 32 } },
+            { id: "fohox-3", label: "Fall of the House of X #3", tier: "essential", cover: { q: "Fall of the House of X", issue: 3 } },
+            { id: "x21-33", label: "X-Men (2021) #33", tier: "essential", cover: { q: "X-Men (2021)", issue: 33 } },
+            { id: "resmag-4", label: "Resurrection of Magneto #4", tier: "essential", cover: { q: "Resurrection of Magneto", issue: 4 } },
+            { id: "deadxmen-24", label: "Dead X-Men #2–4", tier: "essential", cover: { q: "Dead X-Men", issue: 2 } },
+            { id: "ropox-3", label: "Rise of the Powers of X #3", tier: "essential", cover: { q: "Rise of the Powers of X", issue: 3 } },
+            { id: "fohox-4", label: "Fall of the House of X #4", tier: "essential", cover: { q: "Fall of the House of X", issue: 4 } },
+            { id: "ropox-4", label: "Rise of the Powers of X #4", tier: "essential", cover: { q: "Rise of the Powers of X", issue: 4 } },
+            { id: "forever-24", label: "X-Men: Forever #2–4", tier: "essential", cover: { q: "X-Men: Forever (2024)", issue: 2 } },
+            { id: "x21-34", label: "X-Men (2021) #34", tier: "essential", cover: { q: "X-Men (2021)", issue: 34 } },
+            { id: "fohox-5", label: "Fall of the House of X #5", tier: "essential", cover: { q: "Fall of the House of X", issue: 5 } },
+            { id: "ropox-5", label: "Rise of the Powers of X #5", tier: "essential", cover: { q: "Rise of the Powers of X", issue: 5 } },
+            { id: "x21-35", label: "X-Men (2021) #35 — o epílogo da era", tier: "essential", cover: { q: "X-Men (2021)", issue: 35 } },
+          ],
+        },
+      ],
+    },
+  ],
+};

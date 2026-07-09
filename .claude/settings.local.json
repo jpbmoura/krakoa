@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:marvel.emreparker.com)",
+      "Bash(npx tsc *)",
+      "Bash(node --help)",
+      "Bash(node -p \"process.execArgv\")",
+      "Bash(node -p \"typeof globalThis.localStorage\")",
+      "Bash(node -p \"globalThis.localStorage && Object.getOwnPropertyNames\\(Object.getPrototypeOf\\(globalThis.localStorage\\)\\)\")",
+      "Bash(node --no-experimental-webstorage -p \"typeof globalThis.localStorage\")",
+      "Bash(where node *)",
+      "Bash(node -p \"process.versions\")",
+      "Bash(timeout 25 pnpm dev)"
+    ]
+  }
+}

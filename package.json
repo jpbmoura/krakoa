@@ -1,0 +1,22 @@
+{
+  "name": "krakoa-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node --no-experimental-webstorage node_modules/next/dist/bin/next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.3.4",
+    "postgres": "^3.4.9",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
