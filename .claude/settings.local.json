@@ -10,7 +10,9 @@
       "Bash(node --no-experimental-webstorage -p \"typeof globalThis.localStorage\")",
       "Bash(where node *)",
       "Bash(node -p \"process.versions\")",
-      "Bash(timeout 25 pnpm dev)"
+      "Bash(timeout 25 pnpm dev)",
+      "PowerShell(pnpm add *)",
+      "PowerShell(Get-Process *)"
     ]
   }
 }
