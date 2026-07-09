@@ -4,6 +4,14 @@
    ============================================================ */
 
 :root {
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --display: "Archivo", "Arial Black", sans-serif;
+}
+
+/* tema claro — padrão */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
   --paper: #efeadd;
   --paper-deep: #e6e0cf;
   --ink: #16150f;
@@ -11,8 +19,41 @@
   --red-soft: rgba(213, 35, 44, 0.08);
   --rule: #c9c2ac;
   --dim: #77715f;
-  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
-  --display: "Archivo", "Arial Black", sans-serif;
+  --hatch: rgba(22, 21, 15, 0.12);
+  --hatch-soft: rgba(22, 21, 15, 0.07);
+  --shadow: rgba(22, 21, 15, 0.18);
+}
+
+/* tema escuro — "papel" vira nanquim, vermelho sobe de luminância */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #131210;
+  --paper-deep: #1b1a16;
+  --ink: #e8e3d5;
+  --red: #e8434b;
+  --red-soft: rgba(232, 67, 75, 0.13);
+  --rule: #3b392f;
+  --dim: #8d8878;
+  --hatch: rgba(232, 227, 213, 0.14);
+  --hatch-soft: rgba(232, 227, 213, 0.08);
+  --shadow: rgba(0, 0, 0, 0.55);
+}
+
+/* sem escolha explícita, segue o sistema */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #131210;
+    --paper-deep: #1b1a16;
+    --ink: #e8e3d5;
+    --red: #e8434b;
+    --red-soft: rgba(232, 67, 75, 0.13);
+    --rule: #3b392f;
+    --dim: #8d8878;
+    --hatch: rgba(232, 227, 213, 0.14);
+    --hatch-soft: rgba(232, 227, 213, 0.08);
+    --shadow: rgba(0, 0, 0, 0.55);
+  }
 }
 
 * { box-sizing: border-box; }
@@ -32,10 +73,49 @@ body {
 }
 
 .frame {
+  position: relative;
   max-width: 860px;
   margin: 0 auto;
   padding: 40px 20px 80px;
 }
+
+/* ---------- alternador de tema ---------- */
+
+.theme-toggle {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.theme-toggle:hover { background: var(--red-soft); border-color: var(--red); color: var(--red); }
+.theme-toggle:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+/* ícone = ação: lua no claro (ir pro escuro), sol no escuro */
+.theme-toggle .sun { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+}
+
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: none; }
+:root[data-theme="light"] .theme-toggle .sun { display: none; }
+:root[data-theme="light"] .theme-toggle .moon { display: block; }
 
 /* ---------- tipografia utilitária ---------- */
 
@@ -189,7 +269,7 @@ h3 {
   height: 10px;
   border: 1px solid var(--ink);
   background:
-    repeating-linear-gradient(-45deg, transparent 0 4px, rgba(22, 21, 15, 0.12) 4px 5px);
+    repeating-linear-gradient(-45deg, transparent 0 4px, var(--hatch) 4px 5px);
 }
 .bar-fill { height: 100%; background: var(--red); transition: width 300ms ease; }
 .bar-num { font-size: 11px; font-weight: 600; white-space: nowrap; }
@@ -288,7 +368,7 @@ h3 {
   background: var(--paper);
   border: 1px solid var(--ink);
   border-top: 3px solid var(--red);
-  box-shadow: 6px 6px 0 rgba(22, 21, 15, 0.18);
+  box-shadow: 6px 6px 0 var(--shadow);
   padding: 8px;
   pointer-events: none;
   animation: cover-in 140ms ease;
@@ -307,7 +387,7 @@ h3 {
 .cover-frame {
   aspect-ratio: 2 / 3;
   background:
-    repeating-linear-gradient(-45deg, transparent 0 5px, rgba(22, 21, 15, 0.07) 5px 6px);
+    repeating-linear-gradient(-45deg, transparent 0 5px, var(--hatch-soft) 5px 6px);
   display: flex;
   align-items: center;
   justify-content: center;

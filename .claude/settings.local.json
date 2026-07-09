@@ -12,7 +12,11 @@
       "Bash(node -p \"process.versions\")",
       "Bash(timeout 25 pnpm dev)",
       "PowerShell(pnpm add *)",
-      "PowerShell(Get-Process *)"
+      "PowerShell(Get-Process *)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm dev *)",
+      "Bash(tee /c/Users/joao_/AppData/Local/Temp/claude/D--P-Me-krakoa-tracker/d1779cf9-9fa9-4960-a1bc-753fcb5c7c53/scratchpad/dev.log)",
+      "Bash(curl -s 'http://localhost:3001/_next/static/css/app/layout.css')"
     ]
   }
 }
