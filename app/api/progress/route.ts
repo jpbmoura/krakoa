@@ -1,4 +1,5 @@
 import { ready } from "@/lib/db";
+import { migrateParents } from "@/lib/progress";
 
 // Deploy pessoal, sem auth: quem tem a URL lê e escreve.
 // Ausência de linha = não lido.
@@ -15,6 +16,7 @@ export async function GET(req: Request) {
     `;
     const map: Record<string, true> = {};
     for (const r of rows) map[r.issue_id] = true;
+    await migrateParents(sql, slug, map);
     return Response.json(map);
   } catch {
     return Response.json({ error: "db_error" }, { status: 500 });
@@ -24,7 +26,15 @@ export async function GET(req: Request) {
 interface PostBody {
   slug?: unknown;
   issueId?: unknown;
+  issueIds?: unknown;
   read?: unknown;
+}
+
+function idList(body: PostBody): string[] {
+  if (Array.isArray(body.issueIds)) {
+    return body.issueIds.filter((v): v is string => typeof v === "string" && v.length > 0);
+  }
+  return typeof body.issueId === "string" && body.issueId ? [body.issueId] : [];
 }
 
 export async function POST(req: Request) {
@@ -36,23 +46,24 @@ export async function POST(req: Request) {
   }
 
   const slug = typeof body.slug === "string" ? body.slug : null;
-  const issueId = typeof body.issueId === "string" ? body.issueId : null;
   const read = typeof body.read === "boolean" ? body.read : null;
+  const ids = idList(body);
 
-  if (!slug || !issueId || read === null) {
+  if (!slug || ids.length === 0 || read === null) {
     return Response.json({ error: "invalid_body" }, { status: 400 });
   }
 
   try {
     const sql = await ready();
     if (read) {
+      const rows = ids.map((id) => ({ slug, issue_id: id }));
       await sql`
-        INSERT INTO progress (slug, issue_id) VALUES (${slug}, ${issueId})
+        INSERT INTO progress ${sql(rows)}
         ON CONFLICT (slug, issue_id) DO NOTHING
       `;
     } else {
       await sql`
-        DELETE FROM progress WHERE slug = ${slug} AND issue_id = ${issueId}
+        DELETE FROM progress WHERE slug = ${slug} AND issue_id IN ${sql(ids)}
       `;
     }
     return Response.json({ ok: true });

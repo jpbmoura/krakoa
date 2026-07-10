@@ -16,7 +16,28 @@
       "Bash(pnpm build *)",
       "Bash(pnpm dev *)",
       "Bash(tee /c/Users/joao_/AppData/Local/Temp/claude/D--P-Me-krakoa-tracker/d1779cf9-9fa9-4960-a1bc-753fcb5c7c53/scratchpad/dev.log)",
-      "Bash(curl -s 'http://localhost:3001/_next/static/css/app/layout.css')"
+      "Bash(curl -s 'http://localhost:3001/_next/static/css/app/layout.css')",
+      "Bash(~/.nvm/versions/node/v22.21.1/bin/node --experimental-strip-types --experimental-loader ./loader.mjs check.ts)",
+      "Bash(DATABASE_URL=\"postgres://postgres:postgres@127.0.0.1:5433/postgres\" PATH=\"$HOME/.nvm/versions/node/v22.21.1/bin:$PATH\" npx next *)",
+      "WebFetch(domain:www.marvel.com)",
+      "Bash(curl -sS -o /private/tmp/claude-501/-Users-jpbmoura-P-Me-krakoa/e69734b2-f715-4d72-9c67-23231f881333/scratchpad/dox.html -w \"%{http_code} %{size_download}\\\\n\" -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0 Safari/537.36\" -H \"Accept-Language: en-US,en;q=0.9\" \"https://www.marvel.com/comics/guides/1664/dawn-of-x\")",
+      "Bash(python3 -)",
+      "WebSearch",
+      "Bash(python3 parse.py dox.html)",
+      "Bash(cat)",
+      "Bash(python3 dump.py dox.html reign-of-x.html destiny-of-x.html fall-of-x.html)",
+      "Bash(~/.nvm/versions/node/v22.21.1/bin/node pg.mjs)",
+      "Bash(DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5433/postgres PATH=/Users/jpbmoura/.nvm/versions/node/v22.21.1/bin:__TRACKED_VAR__ npx next dev -p 3111)",
+      "Bash(curl -s http://localhost:3111/guide/era-krakoa)",
+      "Bash(pkill -f \"next dev -p 3111\")",
+      "Bash(pkill -f \"pg.mjs\")",
+      "Bash(lsof -nP -iTCP:5433 -sTCP:LISTEN)",
+      "Bash(lsof -nP -iTCP:3111 -sTCP:LISTEN)",
+      "Bash(PATH=\"$HOME/.nvm/versions/node/v22.21.1/bin:$PATH\" npx next *)",
+      "Bash(PATH=/Users/jpbmoura/.nvm/versions/node/v22.21.1/bin:__TRACKED_VAR__ timeout 25 pnpm dev)",
+      "Bash(PATH=\"$HOME/.nvm/versions/node/v22.21.1/bin:$PATH\" pnpm dev *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/guide/era-krakoa)",
+      "Bash(pkill -f \"next dev\")"
     ]
   }
 }

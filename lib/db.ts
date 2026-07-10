@@ -1,6 +1,6 @@
 import postgres from "postgres";
 
-type Sql = ReturnType<typeof postgres>;
+export type Sql = ReturnType<typeof postgres>;
 
 // Cache no globalThis pra sobreviver ao HMR do Next dev sem vazar conexões.
 const g = globalThis as unknown as {

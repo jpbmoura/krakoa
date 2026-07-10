@@ -19,11 +19,13 @@ interface IssueDetail {
   cover?: { path: string; extension: string | null } | null;
 }
 
-// A busca da API é full-text tokenizada — parênteses causam 500,
-// então trocamos por espaço. O ano dentro dos parênteses vira só
+// A busca da API é full-text tokenizada e engasga com pontuação: parênteses
+// causam 500, e dois-pontos zeram o resultado ("X of Swords: Creation" não
+// achava nada). Trocamos toda pontuação por espaço — a validação abaixo já
+// compara por token, então nada se perde. O ano dentro dos parênteses vira só
 // mais um token, o que ajuda a desambiguar séries homônimas.
 function sanitize(q: string): string {
-  return q.replace(/[()]/g, " ").replace(/\s+/g, " ").trim();
+  return q.replace(/[^A-Za-z0-9]+/g, " ").trim();
 }
 
 function tokens(s: string): string[] {
